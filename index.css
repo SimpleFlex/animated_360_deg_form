@@ -1,0 +1,127 @@
+/* You can use any Font-family of your choice */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+.container{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* the css code for the rotating animation
+Note: that should be thwe alst hing you do */
+
+.container span{
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: red;
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2) rotate(calc(var(--i) * (360deg / 54)));
+    animation: primoLaxman  3s linear infinite;
+    animation-delay: calc(var(--i) * (3s / 54));
+}
+@keyframes primoLaxman{
+    0%{
+        background: rgb(46, 16, 165);
+    }
+    25%{
+        background: rgb(3, 144, 66);
+    }
+
+}
+
+.login-box{
+    position: absolute;
+    width: 400px;
+    /* background: blue; */
+}
+
+.login-box form{
+    width: 100%;
+    padding: 0 50px;
+}
+
+h2{
+    font-size: 2em;
+    color: red;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    margin: 25px 0;
+}
+
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #444;
+    outline: none;
+    color: white;
+    border-radius: 40px;
+}
+
+.forget-pass{
+    margin: 15px 0 10px;
+    text-align: center;
+}
+
+.forget-pass a{
+    font: 85em;
+    color: white;
+    text-decoration: none;
+}
+
+.forget-pass a:hover{
+    text-decoration: underline;
+}
+
+.btn{
+    width: 100%;
+    height: 40px;
+    background-color: red;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1em;
+    color: black;
+    font-weight: 600;
+}
+
+.sign-up{
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.sign-up a{
+    font-size: 1em;
+    color: red;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sign-up a:hover{
+    text-decoration: underline;
+}
